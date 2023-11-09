@@ -1,0 +1,99 @@
+<!DOCTYPE html
+<html>
+<head>
+  <title>Formulário </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: bold;
+      display: block;
+    }
+    .form-group input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: width 0.3s;
+    }
+    .form-group input[type="text"]:focus {
+      width: calc(100% - 40px);
+    }
+    .form-group textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: width 0.3s;
+    }
+    .form-group textarea:focus {
+      width: calc(100% - 40px);
+    }
+    .form-group button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<h2>Formulário de Lucas Colombi</h2>
+        <h3>Estudante de sistemas de informação - Estácio de Sá</h3>
+<body>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" placeholder="Digite seu nome">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="Digite seu email">
+    </div>
+    <div class="form-group">
+      <label for="message">Mensagem:</label>
+      <textarea id="message" placeholder="Digite sua mensagem"></textarea>
+    </div>
+    <div class="form-group">
+      <button onclick="submitForm()">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    function submitForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      if (name === "" || email === "" || message === "") {
+        alert("Por favor, preencha todos os campos.");
+      } else {
+        // Aqui você pode enviar os dados do formulário para o servidor ou realizar outras ações com os dados.
+        alert("Formulário enviado com sucesso!");
+        // Resetar o formulário após o envio, se desejado
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
